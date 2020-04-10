@@ -32,9 +32,13 @@ class Solution {
                 return;
             }
             nonZeroIndex = newNonZeroIndex;
-            swap(nums, zeroIndex, nonZeroIndex);
-            zeroIndex++;
-            nonZeroIndex++;
+            if (nonZeroIndex > zeroIndex) {
+                swap(nums, zeroIndex, nonZeroIndex);
+                zeroIndex++;
+                nonZeroIndex++;
+            } else {
+                nonZeroIndex++;
+            }
         }
     }
 
